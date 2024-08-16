@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* button:hover{
+    text-decoration: underline;
+    transition: 1s;
+} */
+ /* App.css */
+.heybutton {
+    
+    
+    position: relative; /* For positioning the underline */
+    cursor: pointer;
+    
+    
+  }
+  
+  .heybutton::after {
+    content: ''; /* Empty content */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Align to left */
+    bottom: 0; /* Align to bottom */
+    width: 0; /* Start with no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: red; /* Color of the underline */
+    transition: width 500ms ease; /* Transition for width over 1 second */
+  }
+  
+  .heybutton:hover::after {
+    width: 100%; /* Expand the underline to full width */
+    background-color: red;
+  }
+  
+  
+  
